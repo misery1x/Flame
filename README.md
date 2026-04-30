@@ -22,8 +22,6 @@ Flame/          → Core DLL (injected into javaw.exe)
 ├── Rendering/  → OpenGL hook, ImGui overlay, custom UI widgets
 ├── ModuleManager/  → Module system with per-module settings
 └── Framework/  → ImGui, MinHook, JNI headers, OpenGL loader
-
-Loader/         → Standalone injector with ImGui UI
 ```
 
 ## Build
