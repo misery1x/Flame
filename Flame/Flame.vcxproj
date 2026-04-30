@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{920b6750-5d02-4e03-adc1-ca1d3acc6c37}</ProjectGuid>
+    <RootNamespace>Flame</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <!-- All configs build as DLL -->
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>..\Build\</OutDir>
+    <IntDir>..\Build\intermediates\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>..\build</OutDir>
+    <IntDir>..\build\Intermediates</IntDir>
+  </PropertyGroup>
+  <!-- ======== Debug|Win32 ======== -->
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;FLAME_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)Framework\JNI;$(ProjectDir)Framework\Minhook;$(ProjectDir)Framework\ImGui;$(ProjectDir)Framework\OpenGL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ProjectDir)Framework\JNI;$(ProjectDir)Framework\Minhook;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;jvm.lib;libMinHook.x64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <!-- ======== Release|Win32 ======== -->
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;FLAME_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)Framework\JNI;$(ProjectDir)Framework\Minhook;$(ProjectDir)Framework\ImGui;$(ProjectDir)Framework\OpenGL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ProjectDir)Framework\JNI;$(ProjectDir)Framework\Minhook;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;jvm.lib;libMinHook.x64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <!-- ======== Debug|x64 ======== -->
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;_USRDLL;FLAME_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)Framework\JNI;$(ProjectDir)Framework\Minhook;$(ProjectDir)Framework\ImGui;$(ProjectDir)Framework\OpenGL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ProjectDir)Framework\JNI;$(ProjectDir)Framework\Minhook;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;jvm.lib;libMinHook.x64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <!-- ======== Release|x64 ======== -->
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;_USRDLL;FLAME_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)Framework\JNI;$(ProjectDir)Framework\Minhook;$(ProjectDir)Framework\ImGui;$(ProjectDir)Framework\OpenGL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ProjectDir)Framework\JNI;$(ProjectDir)Framework\Minhook;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;jvm.lib;libMinHook.x64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <!-- ======== Source Files ======== -->
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="KeybindHandler\KeybindHandler.cpp" />
+    <!-- Module Manager -->
+    <ClCompile Include="ModuleManager\ModuleManager.cpp" />
+    <ClCompile Include="ModuleManager\Impl\Combat\LeftClicker.cpp" />
+    <ClCompile Include="ModuleManager\Impl\Combat\RightClicker.cpp" />
+    <ClCompile Include="ModuleManager\Impl\Render\HUD.cpp" />
+    <ClCompile Include="ModuleManager\Impl\Render\PlayerESP.cpp" />
+    <ClCompile Include="Rendering\UserInterface\Widgets\widgets.cpp" />
+    <!-- SDK -->
+    <ClCompile Include="SDK\sdk.cpp" />
+    <ClCompile Include="SDK\Entity.cpp" />
+    <ClCompile Include="SDK\Minecraft\Minecraft.cpp" />
+    <ClCompile Include="SDK\thePlayer\thePlayer.cpp" />
+    <ClCompile Include="SDK\theWorld\theWorld.cpp" />
+    <ClCompile Include="SDK\GameSettings\GameSettings.cpp" />
+    <ClCompile Include="SDK\Timer\Timer.cpp" />
+    <ClCompile Include="SDK\RenderManager\RenderManager.cpp" />
+    <ClCompile Include="SDK\MovingObjectPosition\MovingObjectPosition.cpp" />
+    <ClCompile Include="SDK\ItemStack\ItemStack.cpp" />
+    <ClCompile Include="SDK\Item\Item.cpp" />
+    <!-- Rendering -->
+    <ClCompile Include="Rendering\Hooking\hooking.cpp" />
+    <ClCompile Include="Rendering\Overlay\overlay.cpp" />
+    <ClCompile Include="Rendering\UserInterface\interface.cpp" />
+    <ClCompile Include="Rendering\RenderUtils.cpp" />
+    <!-- ImGui -->
+    <ClCompile Include="Framework\ImGui\imgui.cpp" />
+    <ClCompile Include="Framework\ImGui\imgui_demo.cpp" />
+    <ClCompile Include="Framework\ImGui\imgui_draw.cpp" />
+    <ClCompile Include="Framework\ImGui\imgui_tables.cpp" />
+    <ClCompile Include="Framework\ImGui\imgui_widgets.cpp" />
+    <ClCompile Include="Framework\ImGui\imgui_impl_win32.cpp" />
+    <ClCompile Include="Framework\ImGui\imgui_impl_opengl3.cpp" />
+    <!-- OpenGL -->
+    <ClCompile Include="Framework\OpenGL\gl.c" />
+  </ItemGroup>
+  <!-- ======== Header Files ======== -->
+  <ItemGroup>
+    <ClInclude Include="KeybindHandler\KeybindHandler.hpp" />
+    <!-- Module Manager -->
+    <ClInclude Include="ModuleManager\Module.hpp" />
+    <ClInclude Include="ModuleManager\ModuleManager.hpp" />
+    <ClInclude Include="ModuleManager\Impl\Combat\LeftClicker.hpp" />
+    <ClInclude Include="ModuleManager\Impl\Combat\RightClicker.hpp" />
+    <ClInclude Include="ModuleManager\Impl\Render\HUD.hpp" />
+    <ClInclude Include="ModuleManager\Impl\Render\PlayerESP.hpp" />
+    <!-- SDK -->
+    <ClInclude Include="SDK\Entity.hpp" />
+    <ClInclude Include="SDK\Minecraft\Minecraft.hpp" />
+    <ClInclude Include="SDK\sdk.hpp" />
+    <ClInclude Include="SDK\thePlayer\thePlayer.hpp" />
+    <ClInclude Include="SDK\theWorld\theWorld.hpp" />
+    <ClInclude Include="SDK\GameSettings\GameSettings.hpp" />
+    <ClInclude Include="SDK\Timer\Timer.hpp" />
+    <ClInclude Include="SDK\RenderManager\RenderManager.hpp" />
+    <ClInclude Include="SDK\MovingObjectPosition\MovingObjectPosition.hpp" />
+    <ClInclude Include="SDK\ItemStack\ItemStack.hpp" />
+    <ClInclude Include="SDK\Item\Item.hpp" />
+    <!-- Rendering -->
+    <ClInclude Include="Rendering\Hooking\hooking.hpp" />
+    <ClInclude Include="Rendering\Overlay\overlay.hpp" />
+    <ClInclude Include="Rendering\UserInterface\interface.hpp" />
+    <ClInclude Include="Rendering\RenderUtils.hpp" />
+    <ClInclude Include="Rendering\UserInterface\Widgets\widgets.hpp" />
+    <!-- Framework -->
+    <ClInclude Include="Framework\Minhook\MinHook.h" />
+    <ClInclude Include="Framework\ImGui\imgui.h" />
+    <ClInclude Include="Framework\ImGui\imconfig.h" />
+    <ClInclude Include="Framework\ImGui\imgui_internal.h" />
+    <ClInclude Include="Framework\ImGui\imgui_impl_win32.h" />
+    <ClInclude Include="Framework\ImGui\imgui_impl_opengl3.h" />
+    <ClInclude Include="Framework\ImGui\imgui_impl_opengl3_loader.h" />
+    <ClInclude Include="Framework\ImGui\imstb_rectpack.h" />
+    <ClInclude Include="Framework\ImGui\imstb_textedit.h" />
+    <ClInclude Include="Framework\ImGui\imstb_truetype.h" />
+    <ClInclude Include="Framework\OpenGL\gl.h" />
+    <ClInclude Include="Framework\OpenGL\khrplatform.h" />
+    <ClInclude Include="Framework\JNI\jni.h" />
+    <ClInclude Include="Framework\JNI\jni_md.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

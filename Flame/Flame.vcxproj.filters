@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SDK">
+      <UniqueIdentifier>{A001-0001-0001-0001-000000000001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Rendering">
+      <UniqueIdentifier>{A001-0002-0001-0001-000000000001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ModuleManager">
+      <UniqueIdentifier>{A001-0003-0001-0001-000000000001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Framework">
+      <UniqueIdentifier>{A001-0004-0001-0001-000000000001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\SDK">
+      <UniqueIdentifier>{B001-0001-0001-0001-000000000001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Rendering">
+      <UniqueIdentifier>{B001-0002-0001-0001-000000000001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ModuleManager">
+      <UniqueIdentifier>{B001-0003-0001-0001-000000000001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Framework">
+      <UniqueIdentifier>{B001-0004-0001-0001-000000000001}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="KeybindHandler\KeybindHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ModuleManager\ModuleManager.cpp">
+      <Filter>Source Files\ModuleManager</Filter>
+    </ClCompile>
+    <ClCompile Include="ModuleManager\Impl\Combat\LeftClicker.cpp">
+      <Filter>Source Files\ModuleManager</Filter>
+    </ClCompile>
+    <ClCompile Include="ModuleManager\Impl\Combat\RightClicker.cpp">
+      <Filter>Source Files\ModuleManager</Filter>
+    </ClCompile>
+    <ClCompile Include="ModuleManager\Impl\Render\HUD.cpp">
+      <Filter>Source Files\ModuleManager</Filter>
+    </ClCompile>
+    <ClCompile Include="ModuleManager\Impl\Render\PlayerESP.cpp">
+      <Filter>Source Files\ModuleManager</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\sdk.cpp">
+      <Filter>Source Files\SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\Entity.cpp">
+      <Filter>Source Files\SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\Minecraft\Minecraft.cpp">
+      <Filter>Source Files\SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\thePlayer\thePlayer.cpp">
+      <Filter>Source Files\SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\theWorld\theWorld.cpp">
+      <Filter>Source Files\SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\GameSettings\GameSettings.cpp">
+      <Filter>Source Files\SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\Timer\Timer.cpp">
+      <Filter>Source Files\SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\RenderManager\RenderManager.cpp">
+      <Filter>Source Files\SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\MovingObjectPosition\MovingObjectPosition.cpp">
+      <Filter>Source Files\SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\ItemStack\ItemStack.cpp">
+      <Filter>Source Files\SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\Item\Item.cpp">
+      <Filter>Source Files\SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="Rendering\Hooking\hooking.cpp">
+      <Filter>Source Files\Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="Rendering\Overlay\overlay.cpp">
+      <Filter>Source Files\Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="Rendering\UserInterface\interface.cpp">
+      <Filter>Source Files\Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="Rendering\RenderUtils.cpp">
+      <Filter>Source Files\Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\ImGui\imgui.cpp">
+      <Filter>Source Files\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\ImGui\imgui_demo.cpp">
+      <Filter>Source Files\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\ImGui\imgui_draw.cpp">
+      <Filter>Source Files\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\ImGui\imgui_tables.cpp">
+      <Filter>Source Files\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\ImGui\imgui_widgets.cpp">
+      <Filter>Source Files\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\ImGui\imgui_impl_win32.cpp">
+      <Filter>Source Files\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\ImGui\imgui_impl_opengl3.cpp">
+      <Filter>Source Files\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\OpenGL\gl.c">
+      <Filter>Source Files\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="Rendering\UserInterface\Widgets\widgets.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="KeybindHandler\KeybindHandler.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ModuleManager\Module.hpp">
+      <Filter>Header Files\ModuleManager</Filter>
+    </ClInclude>
+    <ClInclude Include="ModuleManager\ModuleManager.hpp">
+      <Filter>Header Files\ModuleManager</Filter>
+    </ClInclude>
+    <ClInclude Include="ModuleManager\Impl\Combat\LeftClicker.hpp">
+      <Filter>Header Files\ModuleManager</Filter>
+    </ClInclude>
+    <ClInclude Include="ModuleManager\Impl\Combat\RightClicker.hpp">
+      <Filter>Header Files\ModuleManager</Filter>
+    </ClInclude>
+    <ClInclude Include="ModuleManager\Impl\Render\HUD.hpp">
+      <Filter>Header Files\ModuleManager</Filter>
+    </ClInclude>
+    <ClInclude Include="ModuleManager\Impl\Render\PlayerESP.hpp">
+      <Filter>Header Files\ModuleManager</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\Entity.hpp">
+      <Filter>Header Files\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\Minecraft\Minecraft.hpp">
+      <Filter>Header Files\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\thePlayer\thePlayer.hpp">
+      <Filter>Header Files\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\theWorld\theWorld.hpp">
+      <Filter>Header Files\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\GameSettings\GameSettings.hpp">
+      <Filter>Header Files\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\Timer\Timer.hpp">
+      <Filter>Header Files\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\RenderManager\RenderManager.hpp">
+      <Filter>Header Files\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\MovingObjectPosition\MovingObjectPosition.hpp">
+      <Filter>Header Files\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\ItemStack\ItemStack.hpp">
+      <Filter>Header Files\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\Item\Item.hpp">
+      <Filter>Header Files\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="Rendering\Hooking\hooking.hpp">
+      <Filter>Header Files\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="Rendering\Overlay\overlay.hpp">
+      <Filter>Header Files\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="Rendering\UserInterface\interface.hpp">
+      <Filter>Header Files\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="Rendering\RenderUtils.hpp">
+      <Filter>Header Files\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="Rendering\UserInterface\Widgets\widgets.hpp">
+      <Filter>Header Files\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\Minhook\MinHook.h">
+      <Filter>Header Files\Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\ImGui\imgui.h">
+      <Filter>Header Files\Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\ImGui\imconfig.h">
+      <Filter>Header Files\Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\ImGui\imgui_internal.h">
+      <Filter>Header Files\Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\ImGui\imgui_impl_win32.h">
+      <Filter>Header Files\Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\ImGui\imgui_impl_opengl3.h">
+      <Filter>Header Files\Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\ImGui\imgui_impl_opengl3_loader.h">
+      <Filter>Header Files\Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\ImGui\imstb_rectpack.h">
+      <Filter>Header Files\Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\ImGui\imstb_textedit.h">
+      <Filter>Header Files\Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\ImGui\imstb_truetype.h">
+      <Filter>Header Files\Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\OpenGL\gl.h">
+      <Filter>Header Files\Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\OpenGL\khrplatform.h">
+      <Filter>Header Files\Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\JNI\jni.h">
+      <Filter>Header Files\Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\JNI\jni_md.h">
+      <Filter>Header Files\Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\sdk.hpp" />
+  </ItemGroup>
+</Project>
