@@ -1,7 +1,7 @@
 # 🔥 Flame
 
-A lightweight Minecraft 1.8.9 PvP utility client built as a native DLL.  
-Hooks into the JVM at runtime via DLL injection — no jar mods, no client modifications.
+A lightweight Badlion jni hacked client
+Hooks into the JVM at runtime via DLL injection
 
 ---
 
@@ -10,7 +10,7 @@ Hooks into the JVM at runtime via DLL injection — no jar mods, no client modif
 | Category | Module | Description |
 |----------|--------|-------------|
 | **Combat** | LeftClicker | Automated left-click with randomized CPS and hit-select |
-| **Combat** | RightClicker | Automated right-click for block placement |
+| **Combat** | RightClicker | Automated right-click |
 | **Render** | PlayerESP | 2D bounding box overlay on players |
 | **Render** | HUD | Minimal on-screen watermark |
 
@@ -37,7 +37,7 @@ Open `Flame.sln`, build both projects. The DLL outputs to `Build/Flame.dll`.
 ## Usage
 
 1. Launch Minecraft 1.8.9
-2. Run the Loader
+2. Inject via process hacker
 3. Press **INSERT** to toggle the menu
 4. Press **END** to eject
 
